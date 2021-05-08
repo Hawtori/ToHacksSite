@@ -4,15 +4,52 @@
 html{
     scroll-behavior: smooth;
 }
+
+/*class styles*/
+.white-text {
+    color: #fff;
+}
+.black-text {
+    color: #000
+}
+.list-none {
+    list-style: none;
+}
+.verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.center-text {
+    text-align: center;
+}
+.justified-text{
+    text-align: justify;
+}
+.large-text {
+    font-size: 130%;
+}
+.medium-text {
+    font-size: 110%;
+}
+.blue-back {
+    background: #579691;
+}
+.gray-back {
+    background: #cacbcc;
+}
+.black-back {
+    background: #000;
+}
+
+/*elements*/
 .sidepanel {
     width: 0;
     position: fixed;
-    z-index = 1;
-    height: 250px;
+    z-index: 1;
+    height: 100%;
     top: 0;
     right: 0;
-    background-color: #fff;
-    color: red;
+    background-color: lightpink;
+    color: black;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;

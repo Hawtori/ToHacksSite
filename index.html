@@ -12,10 +12,16 @@
     <header>
         <div class = "title">
             <h1>TOHacks Musical Journey</h1>
-            <button class="button button1">About</button>
-        </div>
-        <div>
-            <button class = "openbtn" onclick = "openAbout()"> ? </button>
+            <button class="button button1 openbtn" onclick = "openAbout()"> ? </button>
+            <div class = "sidepanel" id = "sidePanel">  
+                <a href = "javascript:void(0)" class = "closebtn" onclick = "closeAbout()">&times;</a> <!-- puts an x in the panel to let us close it cuz cooler than just saying x --> 
+                <h3 class = "center-text verdana large-text" style = "padding-bottom: 10%"> About </h3>  
+                <div class = "gray-back" style = "padding: 5%;"> 
+                    <p class = "justified-text medium-text"> This project was made for the TO Hacks 2021. The purpose of this project is meant for musicians since music is played better when the musician 
+                            feels the music. It is to help the musicians feel as if they are in surreal places provided in this page and play better. The places we chose are those that produce  
+                            strong emotions. </p> 
+                </div> 
+            </div>
         </div>
     </header>
     <button class="button button2" button href = "#scales">Let's start</button>
@@ -27,3 +33,10 @@
 
 
 </html>
+
+<!--
+  <!-- collaspable panel for about --
+        
+
+    <button class = "openbtn" onclick = "openAbout()"> ? </button> 
+-->
