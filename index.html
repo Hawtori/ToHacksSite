@@ -4,107 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>TOHacks - Musical Journey</title>
-    <style>
-        .title{
-            text-align: center;
-        }
-
-        .button {
-            border: none;
-            color: white;
-            padding: 20px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            margin: 4px 2px;
-            transition-duration: 0.4s;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-
-        .button1{
-            position: fixed;
-            top: 0;
-            right: 0;
-            border: 2px solid red;
-            background-color:white;
-            color: red;
-           
-        }
-
-        .button1:hover {
-            background-color: red;
-            color: white;
-        }
-
-        .button2{
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, 50%);
-            transform: translate(-50%, -50%);
-            border: 2px solid aqua;
-            background-color:white;
-            color:aqua;
-        }
-
-        .button2:hover{
-            background-color: aqua;
-            color: white;
-        }
-
-
-        .button3{
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, 50%);
-            transform: translate(-50%, -50%);
-            border: 2px solid pink;
-            background-color:white;
-            color: pink;
-        }
-
-        .button3:hover{
-            background-color:pink;
-            color: white;
-        }
-
-        .button4{
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, 50%);
-            transform: translate(-50%, -50%);
-            border: 2px solid purple;
-            background-color:white;
-            color: purple;
-        }
-
-        .button4:hover{
-            background-color:purple;
-            color: white;
-        }
-        
-
-    </style>
 </head>
 <body>
     <header>
         <div class = "title">
             <h1>TOHacks Musical Journey</h1>
-            <button class="button button1">?</button>
+            <button class="button button1 openbtn" onclick = "openAbout()"> ? </button>
+            <div class = "sidepanel" id = "sidePanel">  
+                <a href = "javascript:void(0)" class = "closebtn" onclick = "closeAbout()">&times;</a> <!-- puts an x in the panel to let us close it cuz cooler than just saying x --> 
+                <h3 class = "center-text verdana large-text" style = "padding-bottom: 10%"> About </h3>  
+                <div class = "gray-back" style = "padding: 5%;"> 
+                    <p class = "justified-text medium-text"> This project was made for the TO Hacks 2021. The purpose of this project is meant for musicians since music is played better when the musician 
+                            feels the music. It is to help the musicians feel as if they are in surreal places provided in this page and play better. The places we chose are those that produce  
+                            strong emotions. </p> 
+                </div> 
+            </div>
         </div>
     </header>
-    <button class="button button2" button href = "#scales">Let's start</button>
+    <button class="button button2" button href= "#scales">Let's start</button>
 
-    <div id = "scales">
-        <button class="button button3">Minor</button>
+    <div id= "scales">
+        <h2>Choose your scale</h2>
+        <button class="button button3" button href= "#minor">Minor</button>
+        <button class="button button4" button href= "#major">Major</button>
+    </div>
+
+    <div id= "minor">
+        <h2>Choose your sound</h2>
+
+        
+    </div>
+
+    <div id= "major">
+        <h2>Choose your sound</h2>
     </div>
 </body>
 
