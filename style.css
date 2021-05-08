@@ -1,0 +1,43 @@
+﻿body
+{
+}
+html{
+    scroll-behavior: smooth;
+}
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index = 1;
+    height: 250px;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    color: red;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    display: block;
+    transition: 0.3s;
+    color: #888;
+}
+.sidepanel a:hover{
+    color: #aaa;
+}
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+}
+.openbtn {
+    top: 0;
+    right: 0;
+    background-color: #111;
+    color: #fff;
+    border: none;
+}
+.openbtn:hover {
+    background-color: #444;
+}

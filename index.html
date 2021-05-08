@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+<link rel = "stylesheet" href = "style.css">
+<script src = "script.js"></script>
 <html lang = "en">
-
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +12,18 @@
 
 <body>
     <header>
-        <div class = "row"> <!-- top navigation bar -->
-            <div> <!-- for image -->
-                <!-- <img src = "..." height = "some%" width = "some%"> <!-- uncomment this line and change the ... to the icon, give values for height and width -->
+        <!-- collaspable panel for about -->
+        <div class = "sidepanel" id = "sidePanel"> 
+            <a href = "javascript:void(0)" class = "closebtn" onclick = "closeAbout()">&times;</a> <!-- puts an x in the panel to let us close it cuz cooler than just saying x -->
+            <h3 class = "center-text"> About </h3> 
+            <div>
+                <p class = "center-text"> This project was made for the TO Hacks 2021. The purpose of this project is meant for musicians since music is played better when the musician
+                        feels the music. It is to help the musicians feel as if they are in surreal places provided in this page and play better. The places we chose are those that produce 
+                        stron gemotions. </p>
             </div>
-            <div class="column-4 navbar">
-            <ul>
-                <li class="large-text"><a href="index.html">Home</a></li>
-                <li class="large-text"><a href="about.html">About</a></li>
-                <li class="large-text"><a href="contact.html">Contact Us</a></li>
-                <!-- add other navigation stuff as list here -->
-            </ul>
-            </div>
+        </div>
+        <div>
+            <button class = "openbtn" onclick = "openAbout()"> ? </button>
         </div>
     </header>
     <div class="masthead-1 white-text center-text caps" style = "display: inline-block; padding: 15%;">
