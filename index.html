@@ -1,43 +1,112 @@
 <!DOCTYPE html>
-<html lang = "en">
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TO Hacks - Musical Journey | Home</title> <!-- this is the title for the website -->
-    <!-- <link rel="shortcut icon" href="images/..." type="image/x-icon"> --> <!-- uncomment this line to put an icon for the page -->
-</head>
+    <title>TOHacks - Musical Journey</title>
+    <style>
+        .title{
+            text-align: center;
+        }
 
+        .button {
+            border: none;
+            color: white;
+            padding: 20px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .button1{
+            position: fixed;
+            top: 0;
+            right: 0;
+            border: 2px solid red;
+            background-color:white;
+            color: red;
+           
+        }
+
+        .button1:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .button2{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, -50%);
+            border: 2px solid aqua;
+            background-color:white;
+            color:aqua;
+        }
+
+        .button2:hover{
+            background-color: aqua;
+            color: white;
+        }
+
+
+        .button3{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, -50%);
+            border: 2px solid pink;
+            background-color:white;
+            color: pink;
+        }
+
+        .button3:hover{
+            background-color:pink;
+            color: white;
+        }
+
+        .button4{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, -50%);
+            border: 2px solid purple;
+            background-color:white;
+            color: purple;
+        }
+
+        .button4:hover{
+            background-color:purple;
+            color: white;
+        }
+        
+
+    </style>
+</head>
 <body>
     <header>
-        <div class = "row"> <!-- top navigation bar -->
-            <div> <!-- for image -->
-                <!-- <img src = "..." height = "some%" width = "some%"> <!-- uncomment this line and change the ... to the icon, give values for height and width -->
-            </div>
-            <div class="column-4 navbar">
-            <ul>
-                <li class="large-text"><a href="index.html">Home</a></li>
-                <li class="large-text"><a href="about.html">About</a></li>
-                <li class="large-text"><a href="contact.html">Contact Us</a></li>
-                <!-- add other navigation stuff as list here -->
-            </ul>
-            </div>
+        <div class = "title">
+            <h1>TOHacks Musical Journey</h1>
+            <button class="button button1">?</button>
         </div>
     </header>
-    <div class="masthead-1 white-text center-text caps" style = "display: inline-block; padding: 15%;">
-        <div class="verdana">
-            <h3>Website for TO Hacks 2021</h3>
-            <h1>Musical Journey</h1>
-            <button type="button" class="trebuchetms caps white-text" style="font-size: 50%; padding: 1%;"><a href="#choices">Button</a></button>
-        </div>
-    </div>
-     <div class="black-text right-side center-text gray-back" id="choices" style="display: inline-block; padding: 10%;">
-        <img src="images/images" alt="alt text">
-        <p class="courier-new">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis molestiae mollitia placeat omnis. Ea iste officiis, 
-        maxime minima dolorem neque amet nulla a? Temporibus quibusdam harum dicta porro accusantium repudiandae?</p>
-        <button type="button" class="trebuchetms caps white-text" style="padding: 1%;"><a href="another page.html">Go to another page button</a></button>
+    <button class="button button2" button href = "#scales">Let's start</button>
+
+    <div id = "scales">
+        <button class="button button3">Minor</button>
     </div>
 </body>
+
 
 </html>
