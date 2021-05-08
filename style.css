@@ -1,0 +1,179 @@
+body
+{
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*class styles*/
+.white-text {
+    color: #fff;
+}
+.black-text {
+    color: #000
+}
+.list-none {
+    list-style: none;
+}
+.verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.center-text {
+    text-align: center;
+}
+.justified-text{
+    text-align: justify;
+}
+.large-text {
+    font-size: 130%;
+}
+.medium-text {
+    font-size: 110%;
+}
+.blue-back {
+    background: #579691;
+}
+.gray-back {
+    background: #cacbcc;
+}
+.black-back {
+    background: #000;
+}
+
+/*elements*/
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: lightpink;
+    color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    display: block;
+    transition: 0.3s;
+    color: #888;
+}
+.sidepanel a:hover{
+    color: #aaa;
+}
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+}
+.openbtn {
+    top: 0;
+    right: 0;
+    background-color: #111;
+    color: #fff;
+    border: none;
+}
+.openbtn:hover {
+    background-color: #444;
+}
+.title {
+    text-align: center;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.button1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 2px solid red;
+    background-color: white;
+    color: red;
+}
+
+.button1:hover {
+    background-color: red;
+    color: white;
+}
+
+.button2 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid aqua;
+    background-color: white;
+    color: aqua;
+}
+
+.button2:hover {
+    background-color: aqua;
+    color: white;
+}
+
+
+.button3{
+    margin: 0;
+    position: absolute;
+    top: 140%;
+    left: 40%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid pink;
+    background-color:white;
+    color: pink;
+}
+
+.button3:hover{
+    background-color:pink;
+    color: white;
+}
+
+.button4{
+    margin: 0;
+    position: absolute;
+    top: 140%;
+    left: 60%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid purple;
+    background-color:white;
+    color: purple;
+}
+
+.button4:hover{
+    background-color:purple;
+    color: white;
+}
+
+#scales{
+    margin-top: 100%;
+    padding-bottom: 25%;
+}
+
+#minor{
+    margin-top: 100%;
+    padding-bottom: 25%;
+}
+
+#major{
+    margin-top: 100%;
+    padding-bottom: 25%;
+}
+        
