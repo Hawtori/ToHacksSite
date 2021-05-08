@@ -1,4 +1,4 @@
-﻿body
+body
 {
 }
 html{
@@ -128,37 +128,52 @@ html{
 }
 
 
-.button3 {
+.button3{
     margin: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 140%;
+    left: 40%;
     -ms-transform: translate(-50%, 50%);
     transform: translate(-50%, -50%);
     border: 2px solid pink;
-    background-color: white;
+    background-color:white;
     color: pink;
 }
 
-.button3:hover {
-    background-color: pink;
+.button3:hover{
+    background-color:pink;
     color: white;
 }
 
-.button4 {
+.button4{
     margin: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 140%;
+    left: 60%;
     -ms-transform: translate(-50%, 50%);
     transform: translate(-50%, -50%);
     border: 2px solid purple;
-    background-color: white;
+    background-color:white;
     color: purple;
 }
 
-.button4:hover {
-    background-color: purple;
+.button4:hover{
+    background-color:purple;
     color: white;
+}
+
+#scales{
+    margin-top: 100%;
+    padding-bottom: 25%;
+}
+
+#minor{
+    margin-top: 100%;
+    padding-bottom: 25%;
+}
+
+#major{
+    margin-top: 100%;
+    padding-bottom: 25%;
 }
         
