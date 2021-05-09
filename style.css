@@ -1,6 +1,16 @@
-body
-{
+body{
+    background-image: url('piano.JPG');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: 35%;
+    background-color: black;
+    min-height: 500px;
+    width: 500vh;
+    height: 104vh;
 }
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -84,8 +94,9 @@ html{
 .openbtn:hover {
     background-color: #444;
 }
-.title {
+.h1 {
     text-align: center;
+    color: white;
 }
 .slideNumbers {
     color: #f2f2f2;
