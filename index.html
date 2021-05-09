@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" id = "scrollableElement">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>TOHacks - Musical Journey</title>
+</head>
+<body class = "black-back">
+    <header class = "black-back">
+        <h1 class = "white-text center-text cursive" style = "font-size: 500%; padding-bottom: 0%;">Musical Journey</h1> 
+        <img src = "images\piano.JPG" style = "z-index: -2; width: 25%;" class = "center">
+        <button class="button button1 openbtn" onclick = "openAbout()"> ? </button> 
+        <div href = "javascript:void(0)" class = "sidepanel closebtn" id = "sidePanel" onclick = "closeAbout()">   
+        <h3 class = "center-text verdana large-text" style = "padding-bottom: 10%"> About </h3>  
+        <div class = "courier" style = "padding: 5%;"> 
+            <p class = "justified-text medium-text"> Get started by scrolling down and choosing the scale you would like, click on the image that you want to get immersed into the world of your choosing.
+                   <br/><br/> This project was made for the TO Hacks 2021. The purpose of this project is meant for musicians since music is played better when the musician 
+                    feels the music. It is to help the musicians feel as if they are in surreal places provided in this page and play better. The places we chose are those that produce  
+                    strong emotions.<br/><br/> We chose a very simple design as the main focus of this website is to give the user the experience and feel of playing in these areas. The simple design
+                    helps players get to feeling certain emotions quicker to ultimately get started playing quicker, and having to navigate a lot of pages takes away from the core experience.
+                    </p> 
+        </div> 
+        </div>
+    </header>
+    <button class="button button2" onclick = "scrollToHere('scales', 'start')">Let's start</button>
+    <!-- <div id="player" style="position: fixed; top: 0; width: 100%; height: 100%; z-index: -1;">
+            <iframe id="player" style="width: 100%; height: 100%" src="https://www.youtube.com/embed/OVct34NUk3U?autoplay=1&mute=0&enablejsapi=1"> </iframe>
+            <script>
+                var tag = document.createElement('script');
+
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', {
+                    //height: '390',
+                    //width: '640',
+                    //videoId: 'OVct34NUk3U',
+                    playerVars: {
+                        'playsinline': 1,
+                        'autoplay': 1,
+                        'enablejsapi': 1,
+                        'loop': 1
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                    });
+                }
+
+                function onPlayerReady(event) {
+                    event.target.playVideo();
+                }
+            </script>
+        </div> -->
+        
+    <div class = "choices-slideshows">
+        <div id= "scales" class = "">
+            <h2 class = "center-text cursive white-text" style = "padding: 0% 10% 10% 10%; font-size: 500%;">Choose your scale</h2>
+            <div>
+                <button class="button button3" onclick = "scrollToHere('slideshow', 'minor')">Minor</button>
+                <button class="button button4" onclick = "scrollToHere('slideshow', 'major')">Major</button>
+            </div>
+        </div>
+        <!-- so far all good above this -->
+  
+        <div class = "slideshow-container minorSlideShow">
+
+            <div class = "mySlides">
+                <img src = "images\snow.jpg" style = "width: 80%" onclick = "playVideo('m1')">
+                <div class = "text" style="text-align: center;">Listen to the blizzard outside to experience playing inside alone.</div>
+            </div>
+            <div class = "mySlides">
+                <img src = "images\heavyrain.jpg" style = "width: 80%" onclick = "playVideo('m2')">
+                <div class = "text">Listen to heavy rain to experience playing with all the anger and sadness inside.</div>
+            </div>
+            <div class = "mySlides">
+                <img src = "images\empty.jpg" style = "width: 80%" onclick = "playVideo('m3')">
+                <div class = "text">Listen to how silent it is at night when roaming the once busy streets and experience the emptiness.</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style = "text-align: center" class = "minorSlideShow">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div class = "slideshow-container majorSlideShow">
+            <div class = "mySlides">
+                <img src = "images\one1.jpg" style = "width: 80%" onclick = "playVideo('M1')">
+                <div class = "text">Listen to calm ocean sounds with fishies to experience playing underwater.</div>
+            </div>
+            <div class = "mySlides">
+                <img src = "images\two.jpg" style = "width: 80%" onclick = "playVideo('M2')">
+                <div class = "text">Listen to the soft drizzle to experience playing in a calm soft day.</div>
+            </div>
+            <div class = "mySlides">
+                <img src = "images\emptyTunnel.jpg" style = "width: 80%" onclick = "playVideo('M3')">
+                <div class = "text">Listen to the echoes from an empty tunnel to experience playing outdoor late at night alone.</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style = "text-align: center" class = "majorSlideShow">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+    </div>
+    <div id="player" style="position: fixed; top: 0; width: 100%; height: 100%; z-index: 6; visibility: hidden;">
+        <iframe id="player" style="width: 100%; height: 100%"> </iframe>
+        <!-- <script>
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                //height: '390',
+                //width: '640',
+                videoId: 'OVct34NUk3U',
+                playerVars: {
+                    'playsinline': 1,
+                    'autoplay': 1,
+                    'enablejsapi': 1,
+                    'loop': 1
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+                });
+            }
+
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+            
+        </script> -->
+    </div>
+
+    <div id="player"> </div>
+
+    
+</body>
+</html>

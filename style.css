@@ -1,0 +1,298 @@
+body {
+   
+}
+
+
+html {
+    scroll-behavior: smooth;
+    transition: all 1s ease;
+}
+
+/*class styles*/
+.white-text {
+    color: #fff;
+}
+.black-text {
+    color: #000
+}
+.list-none {
+    list-style: none;
+}
+.verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.courier {
+    font-family: Courier New
+}
+.cursive {
+    font-family: Brush Script MT
+}
+.center-text {
+    text-align: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-height: 50%;
+    max-width: 50%;
+}
+.justified-text{
+    text-align: justify;
+}
+.large-text {
+    font-size: 130%;
+}
+.medium-text {
+    font-size: 110%;
+}
+.blue-back {
+    background: #579691;
+}
+.gray-back {
+    background: #cacbcc;
+}
+.black-back {
+    background: #000;
+}
+.white-back {
+    background: #fff;
+}
+.stroke {
+    color: black;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+/* Elements */
+
+/* Side panel about section */
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 50;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: pink;
+    color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    display: block;
+    transition: 0.3s;
+    z-index: 50;
+    color: #888;
+}
+.sidepanel a:hover {
+    color: #aaa;
+    z-index: 50;
+}
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+}
+
+/* General */
+.openbtn {
+    top: 0;
+    right: 0;
+    background-color: #111;
+    color: #fff;
+    border: none;
+}
+.openbtn:hover {
+    background-color: #444;
+}
+.h1 {
+    text-align: center;
+    color: white;
+}
+.slideNumbers {
+    color: #f2f2f2;
+    font-size: 13px;
+    padding: 1% 2%;
+    position: absolute;
+    top: 0;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    z-index: 3;
+    max-height: 1080px;
+}
+.mySlides {
+    text-align: center;
+    display: none;
+    position: relative;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 5%;
+}
+.minorSlideShow {
+    visibility: hidden;
+}
+.majorSlideShow {
+    visibility: hidden;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 2% 4%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.button1 {
+    padding: 1.5%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 2px solid red;
+    background-color: white;
+    color: red;
+}
+.button1:hover {
+    background-color: red;
+    color: white;
+}
+.button2 {
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid aqua;
+    background-color: white;
+    color: aqua;
+}
+.button2:hover {
+    background-color: aqua;
+    color: white;
+}
+
+.button3{
+    margin: 0;
+    position: relative;
+    top: 0%;
+    left: 40%;
+    -ms-transform: translate(-50%, 100%);
+    transform: translate(-180%, 0%);
+    border: 2px solid pink;
+    background-color:white;
+    color: pink;
+}
+.button3:hover{
+    background-color:pink;
+    color: white;
+}
+
+.button4{
+    margin: 0;
+    position: relative;
+    top: 140%;
+    left: 50%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(80%, 0%);
+    border: 2px solid purple;
+    background-color:white;
+    color: purple;
+}
+.button4:hover{
+    background-color:purple;
+    color: white;
+}
+
+.fade-gone {
+    opacity: 0!important;
+    transition: all 2s ease;
+}
+.fade-back {
+    opacity: 1!important;
+    transition: all 2s ease;
+}
+
+.choices-slideshows {
+    position: relative;
+}
+
+#scales {
+    font-size: larger;
+    min-height: 100%;
+    min-width: 80%;
+    margin-top: 20%;
+    margin-bottom: 50%;
+    padding: 0% 10% 10% 10%;
+    overflow: auto;
+    background-clip: border-box;
+    position: absolute;
+}
+
+#minor{
+    margin-top: 100%;
+    padding-bottom: 25%;
+}
+
+#major{
+    margin-top: 100%;
+    padding-bottom: 25%;
+}
+        
