@@ -18,6 +18,12 @@ html{
 .verdana {
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+.courier {
+    font-family: Courier New
+}
+.cursive {
+    font-family: Brush Script MT
+}
 .center-text {
     text-align: center;
 }
@@ -44,11 +50,11 @@ html{
 .sidepanel {
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 50;
     height: 100%;
     top: 0;
     right: 0;
-    background-color: lightpink;
+    background-color: pink;
     color: black;
     overflow-x: hidden;
     transition: 0.5s;
@@ -81,11 +87,100 @@ html{
 .title {
     text-align: center;
 }
+.slideNumbers {
+    color: #f2f2f2;
+    font-size: 13px;
+    padding: 1% 2%;
+    position: absolute;
+    top: 0;
+}
+
+/*Minor slideshow*/
+.slideshowMinor {
+    position: relative;
+    margin: auto;
+}
+.slidesMinor {
+    display: none;
+}
+.prevMinor, .nextMinor{
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    width: auto;
+    margin-top: -2%;
+    padding: 2%;
+    color: gray;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.5s ease;
+    user-select: none;
+}
+.nextMinor {
+    right: 0;
+}
+.prevMinor:hover, .nextMinor:hover {
+    background-color: rgba(0,0,0,0.5); /* makes it half as visible */
+}
+.dotMinor {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.activeMinor, .dotMinor:hover {
+    background-color: #717171;
+}
+
+/*Major slideshow*/
+.slideshowMajor {
+    position: relative;
+    margin: auto;
+}
+.slidesMajor {
+    display: none;
+}
+.prevMajor, .nextMajor {
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    width: auto;
+    margin-top: -2%;
+    padding: 2%;
+    color: gray;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.5s ease;
+    user-select: none;
+}
+.nextMajor {
+    right: 0;
+}
+.prevMajor:hover, .nextMajor:hover {
+    background-color: rgba(0,0,0,0.5); /* makes it half as visible */
+}
+.dotMajor {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.activeMajor, .dotMajor:hover {
+    background-color: #717171;
+}
 
 .button {
     border: none;
     color: white;
-    padding: 20px 32px;
+    padding: 2% 4%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -95,8 +190,8 @@ html{
     cursor: pointer;
     border-radius: 10px;
 }
-
 .button1 {
+    padding: 1.5%;
     position: fixed;
     top: 0;
     right: 0;
@@ -104,12 +199,10 @@ html{
     background-color: white;
     color: red;
 }
-
 .button1:hover {
     background-color: red;
     color: white;
 }
-
 .button2 {
     margin: 0;
     position: absolute;
@@ -121,25 +214,22 @@ html{
     background-color: white;
     color: aqua;
 }
-
 .button2:hover {
     background-color: aqua;
     color: white;
 }
 
-
 .button3{
     margin: 0;
-    position: absolute;
-    top: 140%;
+    position: relative;
+    top: 0%;
     left: 40%;
-    -ms-transform: translate(-50%, 50%);
-    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, 100%);
+    transform: translate(-180%, 0%);
     border: 2px solid pink;
     background-color:white;
     color: pink;
 }
-
 .button3:hover{
     background-color:pink;
     color: white;
@@ -147,24 +237,28 @@ html{
 
 .button4{
     margin: 0;
-    position: absolute;
+    position: relative;
     top: 140%;
     left: 60%;
     -ms-transform: translate(-50%, 50%);
-    transform: translate(-50%, -50%);
+    transform: translate(80%, 0%);
     border: 2px solid purple;
     background-color:white;
     color: purple;
 }
-
 .button4:hover{
     background-color:purple;
     color: white;
 }
 
-#scales{
-    margin-top: 100%;
-    padding-bottom: 25%;
+#scales {
+    font-size: larger;
+    min-height: 100%;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    padding: 3% 10% 10% 10%;
+    overflow: auto;
+    background-clip: border-box;
 }
 
 #minor{
