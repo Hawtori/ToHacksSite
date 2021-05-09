@@ -140,11 +140,11 @@ function showSlide(n) {
 
 function playVideo(which) {
     if (which == 'm1') {videoLink = 'OVct34NUk3U'; createVideo()}
-    if (which == 'm2') {videoLink = '7eZFAGKGQsc'; createVideo()}
+    if (which == 'm2') {videoLink = 'zMJYp-MqCGo'; createVideo()}
     if (which == 'm3') {videoLink = 'QrByMTa_rjQ'; createVideo()}
-    if (which == 'M1') {videoLink = "OVct34NUk3U"; createVideo()}
-    if (which == 'M2') {videoLink = 'OVct34NUk3U'; createVideo()}
-    if (which == 'M3') {videoLink = 'OVct34NUk3U'; createVideo()}
+    if (which == 'M1') {videoLink = "OVct34NUk3U"; createVideo()} // plays ocean for M1
+    if (which == 'M2') {videoLink = 'OVct34NUk3U'; createVideo()} 
+    if (which == 'M3') {videoLink = 'zMJYp-MqCGo'; createVideo()} // plays rain sounds for m2
 
 }
 
