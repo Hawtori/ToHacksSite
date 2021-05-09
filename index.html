@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id = "scrollableElement">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,11 +22,11 @@
         </div> 
         </div>
     </header>
-    <button class="button button2" onclick = "scrollToHere('scales')">Let's start</button>
+    <button class="button button2" onclick = "scrollToHere('scales', 'start')">Let's start</button>
 
-    <div id= "scales" class = "black-back">
+    <div id= "scales" class = "">
         <h2 class = "center-text cursive white-text" style = "padding: 0% 10% 10% 10%; font-size: 500%;">Choose your scale</h2>
-        <div class = "black-back">
+        <div>
             <button class="button button3" onclick = "scrollToHere('slideshow', 'minor')">Minor</button>
             <button class="button button4" onclick = "scrollToHere('slideshow', 'major')">Major</button>
         </div>

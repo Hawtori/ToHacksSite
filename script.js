@@ -3,6 +3,11 @@ var majorActive = false;
 var slideIndexMinor = 1;
 var minorActive = false;
 
+var scrollableElement = document.getElementById("scrollableElement");
+scrollableElement.addEventListener("wheel", fadeIn);
+
+var scaleOpacity = 0;
+
 function openAbout() {
     document.getElementById("sidePanel").style.width = "20%";
 }
@@ -11,11 +16,34 @@ function closeAbout() {
     document.getElementById("sidePanel").style.width = "0px";
 }
 
+function fadeIn() {
+    var delta;
+    if (event.wheelDelta) {
+        delta = event.wheelDelta;
+    } else {
+        delta = -1 * event.deltaY;
+    }
+    if (delta < 0 && scaleOpacity < 1) {
+        scaleOpacity += 0.2;
+    } else if (delta > 0 && scaleOpacity > 0) {
+        scaleOpacity -= 0.22;
+    }
+    document.getElementById("scales").style.opacity = scaleOpacity;
+}
+
 function scrollToHere(idName, m) {
+    if (m == 'start') {
+        document.getElementById("scales").className += " fade-back";
+        alert("scrolling supposedly");
+    }
     if (m == 'minor') {
+        document.getElementById("scales").className.replace(" fade-back", "");
+        document.getElementById("scales").className += " fade-gone";
         setActiveMinor();
     }
     if (m == 'major') {
+        document.getElementById("scales").className.replace(" fade-back", "");
+        document.getElementById("scales").className += " fade-gone";
         setActiveMajor();
     }
     document.getElementById(idName).scrollIntoView();
