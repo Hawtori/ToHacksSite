@@ -34,7 +34,7 @@ html {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
+    width: 50%;
     max-height: 50%;
     max-width: 50%;
 }
@@ -84,10 +84,12 @@ html {
     padding: 8px 8px 8px 32px;
     display: block;
     transition: 0.3s;
+    z-index: 50;
     color: #888;
 }
-.sidepanel a:hover{
+.sidepanel a:hover {
     color: #aaa;
+    z-index: 50;
 }
 .sidepanel .closebtn {
     position: absolute;
@@ -118,34 +120,52 @@ html {
     top: 0;
 }
 
-/* Minor slideshow */
-.slideshowMinor {
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
     position: relative;
     margin: auto;
 }
-.slidesMinor {
+.mySlides {
     display: none;
 }
-.prevMinor, .nextMinor{
+.minorSlideShow {
+    display: none;
+}
+.majorSlideShow {
+    display: none;
+}
+.prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 20%;
+    top: 50%;
     width: auto;
-    margin-top: -2%;
-    padding: 2%;
-    color: gray;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.5s ease;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
     user-select: none;
 }
-.nextMinor {
+.next {
     right: 0;
+    border-radius: 3px 0 0 3px;
 }
-.prevMinor:hover, .nextMinor:hover {
-    background-color: rgba(0,0,0,0.5); /* makes it half as visible */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
-.dotMinor {
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -155,50 +175,10 @@ html {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-.activeMinor, .dotMinor:hover {
+.active, .dot:hover {
     background-color: #717171;
 }
 
-/* Major slideshow */
-.slideshowMajor {
-    position: relative;
-    margin: auto;
-}
-.slidesMajor {
-    display: none;
-}
-.prevMajor, .nextMajor {
-    cursor: pointer;
-    position: absolute;
-    top: 20%;
-    width: auto;
-    margin-top: -2%;
-    padding: 2%;
-    color: gray;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.5s ease;
-    user-select: none;
-}
-.nextMajor {
-    right: 0;
-}
-.prevMajor:hover, .nextMajor:hover {
-    background-color: rgba(0,0,0,0.5); /* makes it half as visible */
-}
-.dotMajor {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.activeMajor, .dotMajor:hover {
-    background-color: #717171;
-}
 
 .button {
     border: none;
@@ -275,22 +255,28 @@ html {
 }
 
 .fade-gone {
-    transition: 1s ease-in-out;
-    opacity: 0;
+    opacity: 0!important;
+    transition: all 2s ease;
 }
 .fade-back {
-    transition: 1s ease-in;
-    opacity: 1;
+    opacity: 1!important;
+    transition: all 2s ease;
+}
+
+.choices-slideshows {
+    position: relative;
 }
 
 #scales {
     font-size: larger;
     min-height: 100%;
+    min-width: 80%;
     margin-top: 20%;
     margin-bottom: 50%;
-    padding: 3% 10% 10% 10%;
+    padding: 0% 10% 10% 10%;
     overflow: auto;
     background-clip: border-box;
+    position: absolute;
 }
 
 #minor{

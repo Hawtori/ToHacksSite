@@ -11,7 +11,7 @@
 <body class = "black-back">
     <header class = "black-back">
         <h1 class = "white-text center-text cursive" style = "font-size: 500%; padding-bottom: 0%;">TOHacks Musical Journey</h1> 
-        <img src = "images\piano.jpg" style = "z-index: -1;" class = "center">
+        <img src = "images\piano.jpg" style = "z-index: -1; width: 25%;" class = "center">
         <button class="button button1 openbtn" onclick = "openAbout()"> ? </button> 
         <div href = "javascript:void(0)" class = "sidepanel closebtn" id = "sidePanel" onclick = "closeAbout()">   
         <h3 class = "center-text verdana large-text" style = "padding-bottom: 10%"> About </h3>  
@@ -24,80 +24,63 @@
     </header>
     <button class="button button2" onclick = "scrollToHere('scales', 'start')">Let's start</button>
 
-    <div id= "scales" class = "">
-        <h2 class = "center-text cursive white-text" style = "padding: 0% 10% 10% 10%; font-size: 500%;">Choose your scale</h2>
-        <div>
-            <button class="button button3" onclick = "scrollToHere('slideshow', 'minor')">Minor</button>
-            <button class="button button4" onclick = "scrollToHere('slideshow', 'major')">Major</button>
-        </div>
-    </div>
-    <!-- so far all good above this -->
-    
-    <h2 class = "blue-back">Choose your sound</h2>
-    <div id = "slideshow" class = "blue-black" style = "display: none">
-        <div id = "minor" class = "black-back">
-            <div class = "slideshowMinor">
-                <div class = "slidesMinor">
-                    <div class = "slideNumbers"> 1 / 3 </div> <!-- shows wwhat slide out of how many slides -->
-                    <img src = "images\one.jpeg" style = "width: 50%; padding-left: 10%; left: 0;">
-                    <div class = "gray-back" style = "padding: 2% 5%;"> Eat Floatie </div>
-                </div>
-                <div class = "slidesMinor">
-                    <div class = "slideNumbers"> 2 / 3 </div> <!-- shows wwhat slide out of how many slides -->
-                    <img src = "images\sad.jpg" style = "width: 50%; padding-left: 10%; left: 0;">
-                    <div class = "gray-back" style = "padding: 2% 5%;"> Sad rain </div>
-                </div>
-                <div class = "slidesMinor">
-                    <div class = "slideNumbers"> 3 / 3 </div> <!-- shows wwhat slide out of how many slides -->
-                    <img src = "images\emptyTunnel.jpg" style = "width: 50%; padding-left: 10%; left: 0;">
-                    <div class = "gray-back" style = "padding: 2% 5%;"> Are you alone? </div>
-                </div>
-
-                <!-- previous and next buttons for slideshow -->
-                <a class = "prevMinor" onclick = "plusSlidesMinor(-1)">&#10094;</a>
-                <a class = "nextMinor" onclick = "plusSlidesMinor(1)">&#10095;</a>
-
-            </div>
-
-            <!-- circles for each slide -->
-            <div style = "text-alight: center" class = "blue-back">
-                <span class="dotMinor" onclick="currentSlideMinor(1)"></span>
-                <span class="dotMinor" onclick="currentSlideMinor(2)"></span>
-                <span class="dotMinor" onclick="currentSlideMinor(3)"></span>
+    <div class = "choices-slideshows">
+        <div id= "scales" class = "">
+            <h2 class = "center-text cursive white-text" style = "padding: 0% 10% 10% 10%; font-size: 500%;">Choose your scale</h2>
+            <div>
+                <button class="button button3" onclick = "scrollToHere('slideshow', 'minor')">Minor</button>
+                <button class="button button4" onclick = "scrollToHere('slideshow', 'major')">Major</button>
             </div>
         </div>
-        <div id= "major" class = "black-back">
-             <div class = "slideshowMajor">
-                <div class = "slidesMajor">
-                    <div class = "slideNumbers"> 1 / 3 </div> <!-- shows wwhat slide out of how many slides -->
-                    <img src = "images\one.jpeg" style = "width: 50%; padding-left: 10%; left: 0;">
-                    <div class = "gray-back" style = "padding: 2% 5%;"> Eat Floatie </div>
-                </div>
-                <div class = "slidesMajor">
-                    <div class = "slideNumbers"> 2 / 3 </div> <!-- shows wwhat slide out of how many slides -->
-                    <img src = "images\sad.jpg" style = "width: 50%; padding-left: 10%; left: 0;">
-                    <div class = "gray-back" style = "padding: 2% 5%;"> Sad rain </div>
-                </div>
-                <div class = "slidesMajor">
-                    <div class = "slideNumbers"> 3 / 3 </div> <!-- shows wwhat slide out of how many slides -->
-                    <img src = "images\emptyTunnel.jpg" style = "width: 50%; padding-left: 10%; left: 0;">
-                    <div class = "gray-back" style = "padding: 2% 5%;"> Are you alone? </div>
-                </div>
+        <!-- so far all good above this -->
+  
+        <div class = "slideshow-container minorSlideShow">
 
-                <!-- previous and next buttons for slideshow -->
-                <a class = "prevMajor" onclick = "plusSlidesMajor(-1)">&#10094;</a>
-                <a class = "nextMajor" onclick = "plusSlidesMajor(1)">&#10095;</a>
-
-                <h2>MAJOR</h2>
+            <div class = "mySlides">
+                <img src = "images\one.jpeg" stle = "width: 100%">
+                <div class = "text">Calm ocean sounds with fishes to experience playing underwater.</div>
+            </div>
+            <div class = "mySlides">
+                <img src = "images\sad.jpg" stle = "width: 100%">
+                <div class = "text">Slow rain to experience playing in a calm soft day.</div>
+            </div>
+            <div class = "mySlides">
+                <img src = "images\emptyTunnel.jpg" stle = "width: 100%">
+                <div class = "text">Empty tunnel to experience playing outdoor late at night alone.</div>
             </div>
 
-            <!-- circles for each slide -->
-            <div style = "text-alight: center">
-                <span class="dotMajor" onclick="currentSlideMajor(1)"></span>
-                <span class="dotMajor" onclick="currentSlideMajor(2)"></span>
-                <span class="dotMajor" onclick="currentSlideMajor(3)"></span>
-            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <div style = "text-align: center" class = "minorSlideShow">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div class = "slideshow-container majorSlideShow">
+            <div class = "mySlides">
+                <img src = "images\one.jpeg" stle = "width: 100%">
+                <div class = "text">MAJOR Calm ocean sounds with fishes to experience playing underwater.</div>
+            </div>
+            <div class = "mySlides">
+                <img src = "images\sad.jpg" stle = "width: 100%">
+                <div class = "text">MAJOR Slow rain to experience playing in a calm soft day.</div>
+            </div>
+            <div class = "mySlides">
+                <img src = "images\emptyTunnel.jpg" stle = "width: 100%">
+                <div class = "text">MAJOR Empty tunnel to experience playing outdoor late at night alone.</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style = "text-align: center" class = "majorSlideShow">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
     </div>
 </body>
 

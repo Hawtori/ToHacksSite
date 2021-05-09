@@ -1,7 +1,4 @@
-var slideIndexMajor = 1;
-var majorActive = false;
-var slideIndexMinor = 1;
-var minorActive = false;
+var slideIndex = 1;
 
 var scrollableElement = document.getElementById("scrollableElement");
 scrollableElement.addEventListener("wheel", fadeIn);
@@ -28,89 +25,62 @@ function fadeIn() {
     } else if (delta > 0 && scaleOpacity > 0) {
         scaleOpacity -= 0.22;
     }
+        document.getElementById("scales").className = "";
     document.getElementById("scales").style.opacity = scaleOpacity;
 }
 
 function scrollToHere(idName, m) {
     if (m == 'start') {
-        document.getElementById("scales").className += " fade-back";
-        alert("scrolling supposedly");
+        document.getElementById("scales").className = " fade-back";
     }
     if (m == 'minor') {
-        document.getElementById("scales").className.replace(" fade-back", "");
-        document.getElementById("scales").className += " fade-gone";
+        document.getElementById("scales").className = " fade-gone";
         setActiveMinor();
     }
     if (m == 'major') {
-        document.getElementById("scales").className.replace(" fade-back", "");
-        document.getElementById("scales").className += " fade-gone";
+        document.getElementById("scales").className = " fade-gone";
         setActiveMajor();
     }
     document.getElementById(idName).scrollIntoView();
 }
 
 function setActiveMajor() {
-    majorActive = true;
-    minorActive = false;
-    document.getElementById("minor").style.visibility = "hidden";
-    document.getElementById("major").style.visibility = "visible";
-    showSlide(1);
+    document.getElementById("scales").style.display = "none";
+    document.getElementsByClassName("majorSlideShow").style.display = "block";
+    document.getElementsByClassName("minorSlideShow").style.display = "none";
+    showSlide(slideIndex);
 }
 
 function setActiveMinor() {
-    minorActive = true;
-    majorActive = false;
-    document.getElementById("minor").style.visibility = "visible";
-    document.getElementById("major").style.visibility = "hidden";
-    showSlide(1);
+    document.getElementById("scales").style.display = "none";
+    document.getElementsByClassName("majorSlideShow").style.display = "none";
+    document.getElementsByClassName("minorSlideShow").style.display = "block";
+    alert("showing minor slides");
+    showSlide(slideIndex);
 }
 
-function plusSlidesMinor(n) {
-    showSlide(slideIndexMinor += n);
+function plusSlides(n) {
+    showSlide(slideIndex += n);
 }
 
-function currentSlideMinor(n) {
-    showSlide(slideIndexMinor = n);
+function currentSlide(n) {
+    showSlide(slideIndex = n);
 }
 
-function plusSlidesMajor(n) {
-    showSlide(slideIndexMajor += n);
-}
-
-function currentSlideMajor(n) {
-    showSlide(slideIndexMajor = n);
-}
 
 function showSlide(n) {
-    if (minorActive == true) {
-        var i;
-        var slide = document.getElementsByClassName("slidesMinor");
-        var dots = document.getElementsByClassName("dotMinor");
-
-        //loop it
-        if (n > slide.length) slideIndexMinor = 1;
-        if (n < 1) slideIndexMinor = slide.length;
-
-        for (i = 0; i < slide.length; i++) slide[i].style.display = "none";
-        for (i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" activeMinor", "");
-
-        slide[slideIndexMinor - 1].style.display = "block";
-        dots[slideIndexMinor - 1].className += " activeMinor";
+    alert("showing slides");
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-    if (majorActive == true) {
-        var i;
-        var slide = document.getElementsByClassName("slidesMajor");
-        var dots = document.getElementsByClassName("dotMajor");
-
-        //loop it
-        if (n > slide.length) slideIndexMinor = 1;
-        if (n < 1) slideIndexMinor = slide.length;
-
-        for (i = 0; i < slide.length; i++) slide[i].style.display = "none";
-        for (i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" activeMajor", "");
-
-        slide[slideIndexMinor - 1].style.display = "block";
-        dots[slideIndexMinor - 1].className += " activeMajor";
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
     }
-    
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }
