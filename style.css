@@ -1,4 +1,5 @@
 body{
+    /*
     background-image: url('piano.JPG');
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -8,6 +9,7 @@ body{
     min-height: 500px;
     width: 500vh;
     height: 104vh;
+    z-index: -1;*/
 }
 
 
