@@ -6,6 +6,8 @@ scrollableElement.addEventListener("wheel", fadeIn);
 
 var scaleOpacity = 0;
 
+let videoLink = '';
+
 document.onkeydown = function (evt) {
     evt = evt || window.event;
     var isEscape = false;
@@ -127,12 +129,50 @@ function showSlide(n) {
     }
 }
 
+// function playVideo(which) {
+//     if (which == 'm1') alert("Play video minor 1");
+//     if (which == 'm2') alert("Play video minor 2");
+//     if (which == 'm3') alert("Play video minor 3");
+//     if (which == 'M1') alert("Play video major 1");
+//     if (which == 'M2') alert("Play video major 2");
+//     if (which == 'M3') alert("Play video major 3");
+// }
+
 function playVideo(which) {
-    if (which == 'm1') alert("Play video minor 1");
-    if (which == 'm2') alert("Play video minor 2");
-    if (which == 'm3') alert("Play video minor 3");
-    if (which == 'M1') alert("Play video major 1");
-    if (which == 'M2') alert("Play video major 2");
-    if (which == 'M3') alert("Play video major 3");
+    if (which == 'm1') {videoLink = 'OVct34NUk3U'; createVideo()}
+    if (which == 'm2') {videoLink = '7eZFAGKGQsc'; createVideo()}
+    if (which == 'm3') {videoLink = 'QrByMTa_rjQ'; createVideo()}
+    if (which == 'M1') {videoLink = "OVct34NUk3U"; createVideo()}
+    if (which == 'M2') {videoLink = 'OVct34NUk3U'; createVideo()}
+    if (which == 'M3') {videoLink = 'OVct34NUk3U'; createVideo()}
+
 }
 
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function createVideo() {
+    document.getElementById("player").style.visibility = "visible";
+    player = new YT.Player('player', {
+    //height: '390',
+    //width: '640',
+    videoId: videoLink,
+    playerVars: {
+        'playsinline': 1,
+        'autoplay': 1,
+        'enablejsapi': 1,
+        'loop': 1
+    },
+    events: {
+        'onReady': onPlayerReady
+    }
+    });
+}
+
+function onPlayerReady(event) {
+    event.target.playVideo();
+}

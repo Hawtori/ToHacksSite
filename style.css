@@ -129,6 +129,7 @@ html {
     max-height: 1080px;
 }
 .mySlides {
+    text-align: center;
     display: none;
     position: relative;
     padding-left: 2.5%;
