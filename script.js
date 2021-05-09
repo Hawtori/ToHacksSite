@@ -67,7 +67,6 @@ function setActiveMinor() {
 
 function plusSlides(n) {
     showSlide(slideIndex += n);
-    alert(slideIndex + '/' + document.getElementsByClassName("mySlides").length);
 }
 
 function currentSlide(n) {
@@ -109,6 +108,12 @@ function showSlide(n) {
     }
 }
 
-function playVideo() {
-    alert("play video here");
+function playVideo(which) {
+    if (which == 'm1') alert("Play video minor 1");
+    if (which == 'm2') alert("Play video minor 2");
+    if (which == 'm3') alert("Play video minor 3");
+    if (which == 'M1') alert("Play video major 1");
+    if (which == 'M2') alert("Play video major 2");
+    if (which == 'M3') alert("Play video major 3");
+
 }
