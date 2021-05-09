@@ -249,7 +249,7 @@ html {
     margin: 0;
     position: relative;
     top: 140%;
-    left: 60%;
+    left: 50%;
     -ms-transform: translate(-50%, 50%);
     transform: translate(80%, 0%);
     border: 2px solid purple;
