@@ -122,18 +122,23 @@ html {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 90%;
     position: relative;
     margin: auto;
+    z-index: 3;
 }
 .mySlides {
     display: none;
+    position: relative;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 5%;
 }
 .minorSlideShow {
-    display: none;
+    visibility: hidden;
 }
 .majorSlideShow {
-    display: none;
+    visibility: hidden;
 }
 .prev, .next {
     cursor: pointer;
