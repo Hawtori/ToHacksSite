@@ -1,15 +1,5 @@
-body{
-    /*
-    background-image: url('piano.JPG');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center;
-    background-size: 35%;
-    background-color: black;
-    min-height: 500px;
-    width: 500vh;
-    height: 104vh;
-    z-index: -1;*/
+body {
+    background-image: url("piano.jpg");
 }
 
 
@@ -38,6 +28,14 @@ html{
 }
 .center-text {
     text-align: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    max-height: 50%;
+    max-width: 50%;
 }
 .justified-text{
     text-align: justify;
@@ -219,7 +217,7 @@ html{
 .button2 {
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 90%;
     left: 50%;
     -ms-transform: translate(-50%, 50%);
     transform: translate(-50%, -50%);
