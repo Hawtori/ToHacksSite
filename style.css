@@ -55,8 +55,17 @@ html{
 .black-back {
     background: #000;
 }
+.white-back {
+    background: #fff;
+}
+.stroke {
+    color: black;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
 
-/*elements*/
+/* Elements */
+
+/* Side panel about section */
 .sidepanel {
     width: 0;
     position: fixed;
@@ -84,6 +93,8 @@ html{
     top: 0;
     right: 25px;
 }
+
+/* General */
 .openbtn {
     top: 0;
     right: 0;
@@ -106,7 +117,7 @@ html{
     top: 0;
 }
 
-/*Minor slideshow*/
+/* Minor slideshow */
 .slideshowMinor {
     position: relative;
     margin: auto;
@@ -147,7 +158,7 @@ html{
     background-color: #717171;
 }
 
-/*Major slideshow*/
+/* Major slideshow */
 .slideshowMajor {
     position: relative;
     margin: auto;
