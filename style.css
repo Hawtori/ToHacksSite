@@ -126,6 +126,7 @@ html {
     position: relative;
     margin: auto;
     z-index: 3;
+    max-height: 1080px;
 }
 .mySlides {
     display: none;

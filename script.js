@@ -6,6 +6,26 @@ scrollableElement.addEventListener("wheel", fadeIn);
 
 var scaleOpacity = 0;
 
+document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key === "Escape" || evt.key === "Esc");
+    } else {
+        isEscape = (evt.keyCode === 27);
+    }
+    if (isEscape) {
+        alert();
+        document.getElementById("scales").style.display = "block";
+        var maj = document.getElementsByClassName("majorSlideShow");
+        maj[0].style.display = "none"; maj[1].style.display = "none";
+        var min = document.getElementsByClassName("minorSlideShow");
+        min[0].style.display = "none"; min[1].style.display = "none";
+        document.getElementsByClassName("button2")[0].style.zIndex = 2;
+        document.getElementById("scales").className = " fade-back";
+    }
+};
+
 function openAbout() {
     document.getElementById("sidePanel").style.width = "20%";
 }
@@ -73,7 +93,6 @@ function currentSlide(n) {
     showSlide(slideIndex = n);
 }
 
-
 function showSlide(n) {
     if (majorPics == false) {
 
@@ -115,5 +134,5 @@ function playVideo(which) {
     if (which == 'M1') alert("Play video major 1");
     if (which == 'M2') alert("Play video major 2");
     if (which == 'M3') alert("Play video major 3");
-
 }
+
